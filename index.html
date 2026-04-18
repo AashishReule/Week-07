@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Business Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- STEP 1: Navigation menu - buttons will be aligned horizontally via flexbox in CSS -->
+  <nav class="nav-menu">
+    <button>Home</button>
+    <button>About</button>
+    <button>Contact Me</button>
+    <button>My GitHub</button>
+  </nav>
+
+  <!-- STEP 2: content-wrapper holds two cards side by side via flexbox in CSS -->
+  <div class="content-wrapper">
+
+    <!-- Card 1: Profile -->
+    <div class="card">
+      <h1>Aashish Reule</h1>
+      <p>Computer Engineering Student @ Seoul Theological University</p>
+      <p>Passionate about web development, AI, and building creative projects. Based in Bucheon, South Korea.</p>
+
+      <!-- STEP 3: Image overflow fix - old fixed size commented out, max-width used instead -->
+      <!-- <img src="profile.jpg" width="1000px"> -->
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Aashish" alt="Profile Photo" class="profile-img">
+    </div>
+
+    <!-- Card 2: Skills (added for Step 2 horizontal layout practice) -->
+    <div class="card">
+      <h1>My Skills</h1>
+      <p>HTML, CSS, Flexbox, GitHub, StackBlitz</p>
+      <p>Learning Python, AI, and Computational Astrophysics. Future goal: KAIST or SNU for graduate studies.</p>
+      <img src="https://api.dicebear.com/7.x/shapes/svg?seed=skills" alt="Skills Visual" class="profile-img">
+    </div>
+
+  </div>
+
+</body>
+</html>
