@@ -1,0 +1,128 @@
+/* ============================================
+   MY BUSINESS CARD - style.css
+   STU Lab Assignment - Flexbox Steps Applied
+   ============================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ============================================
+   STEP 1: NAV MENU — FLEXBOX HORIZONTAL ALIGNMENT
+   display: flex makes buttons sit side by side
+   justify-content: space-between distributes space evenly between them
+   ============================================ */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.nav-menu button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.nav-menu button:hover {
+  background-color: #555;
+}
+
+/* ============================================
+   STEP 2: CONTENT WRAPPER — HORIZONTAL CARD LAYOUT
+   display: flex places the two cards side by side
+   gap: 24px adds spacing between them
+   ============================================ */
+.content-wrapper {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ============================================
+   CARD STYLES (your original, kept intact)
+   ============================================ */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #333;
+  padding: 20px;
+  width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #222;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+button {
+  margin-right: 15px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* ============================================
+   STEP 3: IMAGE OVERFLOW FIX
+   Fixed pixel size commented out
+   max-width: 100% used instead so image
+   never overflows its card container
+   ============================================ */
+.profile-img {
+  /* width: 1000px; */
+  max-width: 100%;
+
+  display: block;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* ============================================
+   RESPONSIVE: stack cards on small screens
+   ============================================ */
+@media (max-width: 600px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+}
